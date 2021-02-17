@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,22 @@
 		4C533C3025DD048D002EC8EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2F25DD048D002EC8EE /* ViewController.swift */; };
 		4C533C3525DD0491002EC8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C3425DD0491002EC8EE /* Assets.xcassets */; };
 		4C533C3825DD0491002EC8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C3625DD0491002EC8EE /* LaunchScreen.storyboard */; };
+		4C533C4B25DD10AD002EC8EE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */; };
+		4C533C5825DD183A002EC8EE /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C5725DD183A002EC8EE /* StringConstants.swift */; };
+		4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C6925DD2AF9002EC8EE /* UITextFieldExtension.swift */; };
+		4C533C7B25DD3041002EC8EE /* FoundersGrotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C6E25DD3041002EC8EE /* FoundersGrotesk-Medium.otf */; };
+		4C533C7C25DD3041002EC8EE /* FoundersGrotesk-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C6F25DD3041002EC8EE /* FoundersGrotesk-RegularItalic.otf */; };
+		4C533C7D25DD3041002EC8EE /* FoundersGrotesk-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7025DD3041002EC8EE /* FoundersGrotesk-MediumItalic.otf */; };
+		4C533C7E25DD3041002EC8EE /* FoundersGroteskCond-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7125DD3041002EC8EE /* FoundersGroteskCond-Lt.otf */; };
+		4C533C7F25DD3041002EC8EE /* FoundersGrotesk-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7225DD3041002EC8EE /* FoundersGrotesk-BoldItalic.otf */; };
+		4C533C8025DD3041002EC8EE /* FoundersGroteskXCond-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7325DD3041002EC8EE /* FoundersGroteskXCond-Bold.otf */; };
+		4C533C8125DD3041002EC8EE /* FoundersGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7425DD3041002EC8EE /* FoundersGrotesk-Bold.otf */; };
+		4C533C8225DD3041002EC8EE /* FoundersGrotesk-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7525DD3041002EC8EE /* FoundersGrotesk-Semibold.otf */; };
+		4C533C8325DD3041002EC8EE /* FoundersGrotesk-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7625DD3041002EC8EE /* FoundersGrotesk-SemiboldItalic.otf */; };
+		4C533C8425DD3041002EC8EE /* FoundersGrotesk-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7725DD3041002EC8EE /* FoundersGrotesk-Light.otf */; };
+		4C533C8525DD3041002EC8EE /* FoundersGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7825DD3041002EC8EE /* FoundersGrotesk-Regular.otf */; };
+		4C533C8625DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7925DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf */; };
+		4C533C8725DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7A25DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf */; };
 		A2624F71FBE187938774F777 /* Pods_FundallCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291E853B3ED84379623F76A5 /* Pods_FundallCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +40,22 @@
 		4C533C3425DD0491002EC8EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C533C3725DD0491002EC8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C533C3925DD0491002EC8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4C533C5725DD183A002EC8EE /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		4C533C6925DD2AF9002EC8EE /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		4C533C6E25DD3041002EC8EE /* FoundersGrotesk-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Medium.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Medium.otf"; sourceTree = "<group>"; };
+		4C533C6F25DD3041002EC8EE /* FoundersGrotesk-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-RegularItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-RegularItalic.otf"; sourceTree = "<group>"; };
+		4C533C7025DD3041002EC8EE /* FoundersGrotesk-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-MediumItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-MediumItalic.otf"; sourceTree = "<group>"; };
+		4C533C7125DD3041002EC8EE /* FoundersGroteskCond-Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGroteskCond-Lt.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGroteskCond-Lt.otf"; sourceTree = "<group>"; };
+		4C533C7225DD3041002EC8EE /* FoundersGrotesk-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-BoldItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-BoldItalic.otf"; sourceTree = "<group>"; };
+		4C533C7325DD3041002EC8EE /* FoundersGroteskXCond-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGroteskXCond-Bold.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGroteskXCond-Bold.otf"; sourceTree = "<group>"; };
+		4C533C7425DD3041002EC8EE /* FoundersGrotesk-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Bold.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Bold.otf"; sourceTree = "<group>"; };
+		4C533C7525DD3041002EC8EE /* FoundersGrotesk-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Semibold.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Semibold.otf"; sourceTree = "<group>"; };
+		4C533C7625DD3041002EC8EE /* FoundersGrotesk-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-SemiboldItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		4C533C7725DD3041002EC8EE /* FoundersGrotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Light.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Light.otf"; sourceTree = "<group>"; };
+		4C533C7825DD3041002EC8EE /* FoundersGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Regular.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Regular.otf"; sourceTree = "<group>"; };
+		4C533C7925DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGroteskXCond-Lt.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGroteskXCond-Lt.otf"; sourceTree = "<group>"; };
+		4C533C7A25DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-LightItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-LightItalic.otf"; sourceTree = "<group>"; };
 		8C29752657D77E1FE37C73CE /* Pods-FundallCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A14C2E8E05ABE56B1BB3A374 /* Pods-FundallCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +78,6 @@
 				A14C2E8E05ABE56B1BB3A374 /* Pods-FundallCodingChallenge.debug.xcconfig */,
 				8C29752657D77E1FE37C73CE /* Pods-FundallCodingChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +102,46 @@
 		4C533C2A25DD048D002EC8EE /* FundallCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				4C533C6825DD2AD8002EC8EE /* Extensions */,
+				4C533C5A25DD200C002EC8EE /* Fonts */,
 				4C533C2B25DD048D002EC8EE /* AppDelegate.swift */,
 				4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */,
+				4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */,
+				4C533C5725DD183A002EC8EE /* StringConstants.swift */,
 				4C533C2F25DD048D002EC8EE /* ViewController.swift */,
 				4C533C3425DD0491002EC8EE /* Assets.xcassets */,
 				4C533C3625DD0491002EC8EE /* LaunchScreen.storyboard */,
 				4C533C3925DD0491002EC8EE /* Info.plist */,
 			);
 			path = FundallCodingChallenge;
+			sourceTree = "<group>";
+		};
+		4C533C5A25DD200C002EC8EE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C533C7425DD3041002EC8EE /* FoundersGrotesk-Bold.otf */,
+				4C533C7225DD3041002EC8EE /* FoundersGrotesk-BoldItalic.otf */,
+				4C533C7725DD3041002EC8EE /* FoundersGrotesk-Light.otf */,
+				4C533C7A25DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf */,
+				4C533C6E25DD3041002EC8EE /* FoundersGrotesk-Medium.otf */,
+				4C533C7025DD3041002EC8EE /* FoundersGrotesk-MediumItalic.otf */,
+				4C533C7825DD3041002EC8EE /* FoundersGrotesk-Regular.otf */,
+				4C533C6F25DD3041002EC8EE /* FoundersGrotesk-RegularItalic.otf */,
+				4C533C7525DD3041002EC8EE /* FoundersGrotesk-Semibold.otf */,
+				4C533C7625DD3041002EC8EE /* FoundersGrotesk-SemiboldItalic.otf */,
+				4C533C7125DD3041002EC8EE /* FoundersGroteskCond-Lt.otf */,
+				4C533C7325DD3041002EC8EE /* FoundersGroteskXCond-Bold.otf */,
+				4C533C7925DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4C533C6825DD2AD8002EC8EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C533C6925DD2AF9002EC8EE /* UITextFieldExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		870C74379265D89F3E2D2746 /* Frameworks */ = {
@@ -148,8 +211,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C533C7F25DD3041002EC8EE /* FoundersGrotesk-BoldItalic.otf in Resources */,
+				4C533C8125DD3041002EC8EE /* FoundersGrotesk-Bold.otf in Resources */,
+				4C533C8425DD3041002EC8EE /* FoundersGrotesk-Light.otf in Resources */,
+				4C533C7D25DD3041002EC8EE /* FoundersGrotesk-MediumItalic.otf in Resources */,
+				4C533C8625DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf in Resources */,
+				4C533C7E25DD3041002EC8EE /* FoundersGroteskCond-Lt.otf in Resources */,
+				4C533C8325DD3041002EC8EE /* FoundersGrotesk-SemiboldItalic.otf in Resources */,
+				4C533C8225DD3041002EC8EE /* FoundersGrotesk-Semibold.otf in Resources */,
+				4C533C8025DD3041002EC8EE /* FoundersGroteskXCond-Bold.otf in Resources */,
 				4C533C3825DD0491002EC8EE /* LaunchScreen.storyboard in Resources */,
+				4C533C8525DD3041002EC8EE /* FoundersGrotesk-Regular.otf in Resources */,
 				4C533C3525DD0491002EC8EE /* Assets.xcassets in Resources */,
+				4C533C7C25DD3041002EC8EE /* FoundersGrotesk-RegularItalic.otf in Resources */,
+				4C533C7B25DD3041002EC8EE /* FoundersGrotesk-Medium.otf in Resources */,
+				4C533C8725DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +280,9 @@
 			files = (
 				4C533C3025DD048D002EC8EE /* ViewController.swift in Sources */,
 				4C533C2C25DD048D002EC8EE /* AppDelegate.swift in Sources */,
+				4C533C4B25DD10AD002EC8EE /* SignUpViewController.swift in Sources */,
+				4C533C5825DD183A002EC8EE /* StringConstants.swift in Sources */,
+				4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */,
 				4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WR337SJ655;
 				INFOPLIST_FILE = FundallCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WR337SJ655;
 				INFOPLIST_FILE = FundallCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

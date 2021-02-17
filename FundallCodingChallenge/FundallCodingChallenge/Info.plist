@@ -56,5 +56,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FoundersGrotesk-Light.otf</string>
+		<string>FoundersGrotesk-Bold.otf</string>
+		<string>FoundersGrotesk-LightItalic.otf</string>
+		<string>FoundersGrotesk-BoldItalic.otf</string>
+		<string>FoundersGrotesk-Medium.otf</string>
+		<string>FoundersGrotesk-MediumItalic.otf</string>
+		<string>FoundersGrotesk-Regular.otf</string>
+		<string>FoundersGrotesk-RegularItalic.otf</string>
+		<string>FoundersGrotesk-Semibold.otf</string>
+		<string>FoundersGrotesk-SemiboldItalic.otf</string>
+		<string>FoundersGroteskCond-Lt.otf</string>
+		<string>FoundersGroteskXCond-Bold.otf</string>
+		<string>FoundersGroteskXCond-Lt.otf</string>
+	</array>
 </dict>
 </plist>

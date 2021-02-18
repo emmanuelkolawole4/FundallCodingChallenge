@@ -61,7 +61,6 @@ class SignUpViewController: UIViewController {
    }
    
    func setUpHeadingStackView() {
-      
       headingText.font = UIFont(name: "FoundersGrotesk-Medium", size: 27)
       headingText.text = "Let's get started"
       headingText.textAlignment = .left

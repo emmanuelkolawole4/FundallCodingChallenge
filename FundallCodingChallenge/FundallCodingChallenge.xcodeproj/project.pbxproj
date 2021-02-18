@@ -32,6 +32,7 @@
 		4C555E7D25DDD0CF00B7FA8F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */; };
 		4C555E7E25DDD0CF00B7FA8F /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */; };
 		4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */; };
+		4C555EA225DE707600B7FA8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555EA125DE707600B7FA8F /* HomeViewController.swift */; };
 		A2624F71FBE187938774F777 /* Pods_FundallCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291E853B3ED84379623F76A5 /* Pods_FundallCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "../../../../../Downloads/Utilities/UIView+Extension.swift"; sourceTree = "<group>"; };
 		4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "../../../../../Downloads/Utilities/UIButton+Extension.swift"; sourceTree = "<group>"; };
 		4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		4C555EA125DE707600B7FA8F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C29752657D77E1FE37C73CE /* Pods-FundallCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A14C2E8E05ABE56B1BB3A374 /* Pods-FundallCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4C555E9A25DDDD8000B7FA8F /* LogIn */,
-				4C555E9925DDDD7400B7FA8F /* PreLogIn */,
+				4C555E9925DDDD7400B7FA8F /* Home */,
 				4C555E9825DDDD5200B7FA8F /* SignUp */,
 			);
 			path = Scenes;
@@ -188,11 +190,12 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		4C555E9925DDDD7400B7FA8F /* PreLogIn */ = {
+		4C555E9925DDDD7400B7FA8F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4C555EA125DE707600B7FA8F /* HomeViewController.swift */,
 			);
-			path = PreLogIn;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4C555E9A25DDDD8000B7FA8F /* LogIn */ = {
@@ -345,6 +348,7 @@
 				4C555E7225DDC9BA00B7FA8F /* PreLogInViewController.swift in Sources */,
 				4C555E7E25DDD0CF00B7FA8F /* UIButton+Extension.swift in Sources */,
 				4C533C5825DD183A002EC8EE /* StringConstants.swift in Sources */,
+				4C555EA225DE707600B7FA8F /* HomeViewController.swift in Sources */,
 				4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */,
 				4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */,
 				4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */,

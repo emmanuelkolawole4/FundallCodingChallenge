@@ -11,13 +11,8 @@ class LogInViewController: UIViewController {
    
    let scrollView = UIScrollView(frame: .zero)
    let headingText = UILabel()
-   let nameStackView = UIStackView()
-   let registrationStackView = UIStackView()
    let logInBtn = UIButton()
-   let firstNameTextField = UITextField()
-   let lastNameTextField = UITextField()
    let emailText = UILabel()
-   let phoneNumberTextField = UITextField()
    let passwordTextField = UITextField()
    let profileImageView = UIImageView()
    
@@ -200,17 +195,11 @@ class LogInViewController: UIViewController {
       }
    }
    
-   @objc func didPressCancel() {
-      print("cancel btn pressed")
-   }
+   @objc func didPressCancel() { print("cancel btn pressed") }
    
-   @objc func dismissKeyboard() {
-      view.endEditing(true)
-   }
+   @objc func dismissKeyboard() { view.endEditing(true) }
    
-   @objc func didPressLogInBtn() {
-      print("login btn pressed")
-   }
+   @objc func didPressLogInBtn() { print("login btn pressed") }
    
 }
 

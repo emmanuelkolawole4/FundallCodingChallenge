@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
       setUpTermsAndConditionText()
    }
    
-   func setUpNavigationItem(_ rightItem: UIBarButtonItem, _ leftItem: UIBarButtonItem) {
+   func setUpNavigationItem(_ rightItem: UIBarButtonItem?, _ leftItem: UIBarButtonItem?) {
       navigationItem.rightBarButtonItem = rightItem
       navigationItem.leftBarButtonItem = leftItem
    }
@@ -247,7 +247,7 @@ class SignUpViewController: UIViewController {
       button.font = UIFont(name: "FoundersGrotesk-Medium", size: 12)
       button.isUserInteractionEnabled = true
       
-      let loginLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(didPressLogin))
+      let loginLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(didPressLogInBtn))
       button.addGestureRecognizer(loginLabelTapGesture)
       
       label.snp.makeConstraints { (make) in
@@ -259,8 +259,6 @@ class SignUpViewController: UIViewController {
          make.centerX.equalTo(scrollView).offset(47)
          make.top.equalTo(signUpBtn.snp.bottom).offset(20)
       }
-      
-      
    }
    
    func setUpTermsAndConditionText() {
@@ -293,7 +291,7 @@ class SignUpViewController: UIViewController {
       print("sign up btn pressed")
    }
    
-   @objc func didPressLogin() {
+   @objc func didPressLogInBtn() {
       print("login btn pressed")
    }
    

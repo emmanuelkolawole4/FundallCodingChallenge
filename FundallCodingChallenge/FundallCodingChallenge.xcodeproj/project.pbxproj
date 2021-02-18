@@ -28,6 +28,10 @@
 		4C533C8525DD3041002EC8EE /* FoundersGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7825DD3041002EC8EE /* FoundersGrotesk-Regular.otf */; };
 		4C533C8625DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7925DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf */; };
 		4C533C8725DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C533C7A25DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf */; };
+		4C555E7225DDC9BA00B7FA8F /* PreLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E7125DDC9BA00B7FA8F /* PreLogInViewController.swift */; };
+		4C555E7D25DDD0CF00B7FA8F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */; };
+		4C555E7E25DDD0CF00B7FA8F /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */; };
+		4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */; };
 		A2624F71FBE187938774F777 /* Pods_FundallCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291E853B3ED84379623F76A5 /* Pods_FundallCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		4C533C7825DD3041002EC8EE /* FoundersGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-Regular.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-Regular.otf"; sourceTree = "<group>"; };
 		4C533C7925DD3041002EC8EE /* FoundersGroteskXCond-Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGroteskXCond-Lt.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGroteskXCond-Lt.otf"; sourceTree = "<group>"; };
 		4C533C7A25DD3041002EC8EE /* FoundersGrotesk-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FoundersGrotesk-LightItalic.otf"; path = "../../../../../Downloads/Founders_Grotesk/FoundersGrotesk-LightItalic.otf"; sourceTree = "<group>"; };
+		4C555E7125DDC9BA00B7FA8F /* PreLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLogInViewController.swift; sourceTree = "<group>"; };
+		4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "../../../../../Downloads/Utilities/UIView+Extension.swift"; sourceTree = "<group>"; };
+		4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "../../../../../Downloads/Utilities/UIButton+Extension.swift"; sourceTree = "<group>"; };
+		4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8C29752657D77E1FE37C73CE /* Pods-FundallCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A14C2E8E05ABE56B1BB3A374 /* Pods-FundallCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundallCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-FundallCodingChallenge/Pods-FundallCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,12 +110,11 @@
 		4C533C2A25DD048D002EC8EE /* FundallCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				4C555E9725DDDD4700B7FA8F /* Scenes */,
+				4C555E9525DDDCC600B7FA8F /* Resources */,
+				4C555E8025DDD19E00B7FA8F /* StringConstants */,
 				4C533C6825DD2AD8002EC8EE /* Extensions */,
 				4C533C5A25DD200C002EC8EE /* Fonts */,
-				4C533C2B25DD048D002EC8EE /* AppDelegate.swift */,
-				4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */,
-				4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */,
-				4C533C5725DD183A002EC8EE /* StringConstants.swift */,
 				4C533C2F25DD048D002EC8EE /* ViewController.swift */,
 				4C533C3425DD0491002EC8EE /* Assets.xcassets */,
 				4C533C3625DD0491002EC8EE /* LaunchScreen.storyboard */,
@@ -139,9 +146,62 @@
 		4C533C6825DD2AD8002EC8EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */,
+				4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */,
 				4C533C6925DD2AF9002EC8EE /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C555E8025DDD19E00B7FA8F /* StringConstants */ = {
+			isa = PBXGroup;
+			children = (
+				4C533C5725DD183A002EC8EE /* StringConstants.swift */,
+			);
+			path = StringConstants;
+			sourceTree = "<group>";
+		};
+		4C555E9525DDDCC600B7FA8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C533C2B25DD048D002EC8EE /* AppDelegate.swift */,
+				4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C555E9725DDDD4700B7FA8F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C555E9A25DDDD8000B7FA8F /* LogIn */,
+				4C555E9925DDDD7400B7FA8F /* PreLogIn */,
+				4C555E9825DDDD5200B7FA8F /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4C555E9825DDDD5200B7FA8F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4C555E9925DDDD7400B7FA8F /* PreLogIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PreLogIn;
+			sourceTree = "<group>";
+		};
+		4C555E9A25DDDD8000B7FA8F /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				4C555E7125DDC9BA00B7FA8F /* PreLogInViewController.swift */,
+				4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */,
+			);
+			path = LogIn;
 			sourceTree = "<group>";
 		};
 		870C74379265D89F3E2D2746 /* Frameworks */ = {
@@ -280,9 +340,13 @@
 			files = (
 				4C533C3025DD048D002EC8EE /* ViewController.swift in Sources */,
 				4C533C2C25DD048D002EC8EE /* AppDelegate.swift in Sources */,
+				4C555E7D25DDD0CF00B7FA8F /* UIView+Extension.swift in Sources */,
 				4C533C4B25DD10AD002EC8EE /* SignUpViewController.swift in Sources */,
+				4C555E7225DDC9BA00B7FA8F /* PreLogInViewController.swift in Sources */,
+				4C555E7E25DDD0CF00B7FA8F /* UIButton+Extension.swift in Sources */,
 				4C533C5825DD183A002EC8EE /* StringConstants.swift in Sources */,
 				4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */,
+				4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */,
 				4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

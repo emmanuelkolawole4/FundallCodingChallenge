@@ -15,14 +15,14 @@ protocol SignUpDisplayLogic {
 }
 
 class SignUpViewController: UIViewController, SignUpDisplayLogic {
+   
    func displayResponse(prompt: SignUpResponse) {
-      print("response", prompt)
       if prompt.success.status == "SUCCESS" {
          preloader.stopAnimating()
          activityLoader.isHidden = true
-         let loginView = LogInViewController()
-         loginView.modalPresentationStyle = .fullScreen
-         present(loginView, animated: true, completion: nil)
+         let view = PreLogInViewController()
+         view.modalPresentationStyle = .fullScreen
+         present(view, animated: true, completion: nil)
       }
    }
    

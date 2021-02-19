@@ -6,9 +6,27 @@
 //
 
 import UIKit
+import SnapKit
 
-class PreLogInViewController: UIViewController {
+protocol PreLogInDisplayLogic {
+   func displayResponse(prompt: GetUserDataResponse)
+   func displayError(prompt: String)
+}
+
+class PreLogInViewController: UIViewController, PreLogInDisplayLogic {
    
+   func displayResponse(prompt: GetUserDataResponse) {
+      usernameLabel.attributedText = NSMutableAttributedString(string: "\(prompt.success.data.firstName)'s".trunc(length: 5), attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+      notAccountTextLabel.attributedText = NSMutableAttributedString(string: "Not \(prompt.success.data.firstName)?", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+   }
+   
+   func displayError(prompt: String) {
+      print("error", prompt)
+   }
+   
+   
+   let usernameLabel = UILabel()
+   let notAccountTextLabel = UILabel()
    var username: String?
    var logoView = UIView()
    var paragraphStyle = NSMutableParagraphStyle()
@@ -16,9 +34,34 @@ class PreLogInViewController: UIViewController {
    var switchAccountButton = UIButton()
    var biometricButton = UIButton()
    var passwordButton = UIButton()
+   var interactor: PreLogInBusinessLogic?
+   
+   func setUpDependencies() {
+      let interactor = PreLogInInteractor()
+      let worker = PreLogInWorker()
+      let presenter = PreLogInPresenter()
+      let networkClient = GetUserDataApiClient()
+      
+      interactor.worker = worker
+      interactor.presenter = presenter
+      
+      worker.networkClient = networkClient
+      
+      presenter.view = self
+      
+      self.interactor = interactor
+   }
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      setUpViews()
+      setUpDependencies()
+      interactor?.getUserData()
+   }
+   
+   override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
+   
+   func setUpViews() {
       view.addBackground()
       removeNavBarBorder()
       setupLogoView()
@@ -26,8 +69,6 @@ class PreLogInViewController: UIViewController {
       setupBiometricButton()
       setupPasswordButton()
    }
-   
-   override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
    
    func setupLogoView() {
       view.addSubview(logoView)
@@ -70,6 +111,7 @@ class PreLogInViewController: UIViewController {
       }
       view.addSubview(createAccountButton)
       createAccountButton.setTitle("Create Account", for: .normal)
+      createAccountButton.addTarget(self, action: #selector(didPressCreateAccount), for: .touchUpInside)
       createAccountButton.setTitleColor(.white, for: .normal)
       createAccountButton.titleLabel?.font = UIFont(name: "FoundersGrotesk-Bold", size: 15)
       createAccountButton.contentMode = .scaleAspectFit
@@ -87,14 +129,14 @@ class PreLogInViewController: UIViewController {
          make.bottom.equalTo(newUserTextLabel.snp.top).offset(-10)
       }
       
-      let notAccountTextLabel = UILabel()
+      
       view3.addSubview(notAccountTextLabel)
-      notAccountTextLabel.attributedText = NSMutableAttributedString(string: "Not Chimdi? ", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+      notAccountTextLabel.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
       notAccountTextLabel.textColor = .white
       notAccountTextLabel.font = UIFont(name: "FoundersGrotesk-Regular", size: 15)
       notAccountTextLabel.snp.makeConstraints { (make) in
          make.centerY.equalTo(view3)
-         make.left.equalTo(view3)
+         make.left.equalTo(view3).offset(-15)
       }
       
       view.addSubview(switchAccountButton)
@@ -115,9 +157,9 @@ class PreLogInViewController: UIViewController {
          make.bottom.equalTo(notAccountTextLabel.snp.top).offset(-10)
       }
       
-      let usernameLabel = UILabel()
+      
       view1.addSubview(usernameLabel)
-      usernameLabel.attributedText = NSMutableAttributedString(string: "Chimdi's ", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+      usernameLabel.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
       usernameLabel.textColor = .white
       usernameLabel.font = UIFont(name: "FoundersGrotesk-Bold", size: 32)
       usernameLabel.snp.makeConstraints { (make) in
@@ -153,6 +195,7 @@ class PreLogInViewController: UIViewController {
       biometricButton.layer.cornerRadius = 26.5
       biometricButton.borderWidth = 1
       biometricButton.borderColor = UIColor(named: "FundallGreen")
+      biometricButton.addTarget(self, action: #selector(didPressLogin), for: .touchUpInside)
       biometricButton.snp.makeConstraints { (make) in
          make.centerX.equalTo(biometricLabel)
          make.height.width.equalTo(53)
@@ -178,6 +221,7 @@ class PreLogInViewController: UIViewController {
       passwordButton.layer.cornerRadius = 26.5
       passwordButton.borderWidth = 1
       passwordButton.borderColor = UIColor(named: "FundallGreen")
+      passwordButton.addTarget(self, action: #selector(didPressLogin), for: .touchUpInside)
       passwordButton.snp.makeConstraints { (make) in
          make.centerX.equalTo(passwordLabel)
          make.height.width.equalTo(53)
@@ -189,6 +233,20 @@ class PreLogInViewController: UIViewController {
       navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
       navigationController?.navigationBar.shadowImage = UIImage()
       navigationController?.navigationBar.layoutIfNeeded()
+   }
+   
+   
+   
+   @objc func didPressLogin() {
+      let view = LogInViewController()
+      view.modalPresentationStyle = .fullScreen
+      present(view, animated: true, completion: nil)
+   }
+   
+   @objc func didPressCreateAccount() {
+      let view = SignUpViewController()
+      view.modalPresentationStyle = .fullScreen
+      present(view, animated: true, completion: nil)
    }
    
 }

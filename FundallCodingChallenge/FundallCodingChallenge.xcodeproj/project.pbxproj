@@ -15,6 +15,10 @@
 		4C12A23E25DF1EEE00E5764B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23D25DF1EEE00E5764B /* StringExtension.swift */; };
 		4C12A24725DF29CE00E5764B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A24625DF29CE00E5764B /* SignUp.swift */; };
 		4C12A25D25DF2B3C00E5764B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A25C25DF2B3C00E5764B /* ApiClient.swift */; };
+		4C12A26425DF518000E5764B /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A26325DF518000E5764B /* LogIn.swift */; };
+		4C12A26825DF562900E5764B /* PreLogInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A26725DF562900E5764B /* PreLogInWorker.swift */; };
+		4C12A26B25DF563500E5764B /* PreLogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A26A25DF563500E5764B /* PreLogInInteractor.swift */; };
+		4C12A26E25DF563F00E5764B /* PreLogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A26D25DF563F00E5764B /* PreLogInPresenter.swift */; };
 		4C533C2C25DD048D002EC8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2B25DD048D002EC8EE /* AppDelegate.swift */; };
 		4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */; };
 		4C533C3025DD048D002EC8EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2F25DD048D002EC8EE /* ViewController.swift */; };
@@ -54,6 +58,10 @@
 		4C12A23D25DF1EEE00E5764B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4C12A24625DF29CE00E5764B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		4C12A25C25DF2B3C00E5764B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		4C12A26325DF518000E5764B /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		4C12A26725DF562900E5764B /* PreLogInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLogInWorker.swift; sourceTree = "<group>"; };
+		4C12A26A25DF563500E5764B /* PreLogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLogInInteractor.swift; sourceTree = "<group>"; };
+		4C12A26D25DF563F00E5764B /* PreLogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLogInPresenter.swift; sourceTree = "<group>"; };
 		4C533C2825DD048D002EC8EE /* FundallCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundallCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C533C2B25DD048D002EC8EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +129,25 @@
 				4C12A24625DF29CE00E5764B /* SignUp.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4C12A26225DF517100E5764B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C12A26325DF518000E5764B /* LogIn.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C12A27025DF658F00E5764B /* PreLogIn */ = {
+			isa = PBXGroup;
+			children = (
+				4C555E7125DDC9BA00B7FA8F /* PreLogInViewController.swift */,
+				4C12A26725DF562900E5764B /* PreLogInWorker.swift */,
+				4C12A26A25DF563500E5764B /* PreLogInInteractor.swift */,
+				4C12A26D25DF563F00E5764B /* PreLogInPresenter.swift */,
+			);
+			path = PreLogIn;
 			sourceTree = "<group>";
 		};
 		4C533C1F25DD048D002EC8EE = {
@@ -241,7 +268,8 @@
 		4C555E9A25DDDD8000B7FA8F /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				4C555E7125DDC9BA00B7FA8F /* PreLogInViewController.swift */,
+				4C12A27025DF658F00E5764B /* PreLogIn */,
+				4C12A26225DF517100E5764B /* Model */,
 				4C555E9C25DDDE0300B7FA8F /* LogInViewController.swift */,
 			);
 			path = LogIn;
@@ -395,9 +423,13 @@
 				4C555EA225DE707600B7FA8F /* HomeViewController.swift in Sources */,
 				4C12A25D25DF2B3C00E5764B /* ApiClient.swift in Sources */,
 				4C12A23225DF1A9F00E5764B /* SignUpWorker.swift in Sources */,
+				4C12A26E25DF563F00E5764B /* PreLogInPresenter.swift in Sources */,
 				4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */,
+				4C12A26425DF518000E5764B /* LogIn.swift in Sources */,
+				4C12A26B25DF563500E5764B /* PreLogInInteractor.swift in Sources */,
 				4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */,
 				4C12A24725DF29CE00E5764B /* SignUp.swift in Sources */,
+				4C12A26825DF562900E5764B /* PreLogInWorker.swift in Sources */,
 				4C12A23825DF1AC100E5764B /* SignUpInteractor.swift in Sources */,
 				4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */,
 			);

@@ -181,7 +181,7 @@ class LogInViewController: UIViewController {
       button.font = UIFont(name: "FoundersGrotesk-Medium", size: 12)
       button.isUserInteractionEnabled = true
       
-      let loginLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(didPressLogInBtn))
+      let loginLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(didPressCreateAccount))
       button.addGestureRecognizer(loginLabelTapGesture)
       
       label.snp.makeConstraints { (make) in
@@ -200,6 +200,12 @@ class LogInViewController: UIViewController {
    @objc func dismissKeyboard() { view.endEditing(true) }
    
    @objc func didPressLogInBtn() { print("login btn pressed") }
+   
+   @objc func didPressCreateAccount() {
+      let view = SignUpViewController()
+      view.modalPresentationStyle = .fullScreen
+      present(view, animated: true, completion: nil)
+   }
    
 }
 

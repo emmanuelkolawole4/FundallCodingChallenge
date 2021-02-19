@@ -14,11 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    
    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
       guard let _ = (scene as? UIWindowScene) else { return }
-      //      if let windowScene = scene as? UIWindowScene {
-      //          self.window = UIWindow(windowScene: windowScene)
-      //          self.window!.rootViewController = UINavigationController(rootViewController: HomeViewController())
-      //          self.window!.makeKeyAndVisible()
-      //      }
       if let windowScene = scene as? UIWindowScene {
          window = UIWindow(windowScene: windowScene)
          let landingPageViewController = MainNavigationController()

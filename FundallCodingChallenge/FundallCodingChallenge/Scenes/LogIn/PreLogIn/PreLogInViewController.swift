@@ -21,7 +21,7 @@ class PreLogInViewController: UIViewController, PreLogInDisplayLogic {
    }
    
    func displayError(prompt: String) {
-      print("error", prompt)
+      presentAlertForError(with: prompt)
    }
    
    
@@ -195,7 +195,6 @@ class PreLogInViewController: UIViewController, PreLogInDisplayLogic {
       biometricButton.layer.cornerRadius = 26.5
       biometricButton.borderWidth = 1
       biometricButton.borderColor = UIColor(named: "FundallGreen")
-      biometricButton.addTarget(self, action: #selector(didPressLogin), for: .touchUpInside)
       biometricButton.snp.makeConstraints { (make) in
          make.centerX.equalTo(biometricLabel)
          make.height.width.equalTo(53)

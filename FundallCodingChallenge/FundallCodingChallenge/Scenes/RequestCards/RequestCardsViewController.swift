@@ -473,7 +473,6 @@ class RequestCardsViewController: UIViewController {
    
    @objc func didPressBack() {
       dismiss(animated: true, completion: nil)
-      print("back")
    }
    
 }

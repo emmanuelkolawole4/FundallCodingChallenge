@@ -28,13 +28,10 @@ class LogInViewController: UIViewController, LogInDisplayLogic {
          UserDefaults.standard.set(prompt.success.user.email, forKey: "email")
          UserDefaults.standard.set(prompt.success.user.tokenType, forKey: "tokenType")
          UserDefaults.standard.set(prompt.success.user.firstName, forKey: "firstName")
-         
-//         print("payload on login vc: ", UserDefaults.standard.object(forKey: "accessToken"), UserDefaults.standard.object(forKey: "email"), UserDefaults.standard.object(forKey: "tokenType"), UserDefaults.standard.object(forKey: "firstName"))
       }
    }
    
    func displayError(prompt: String) {
-      print("error", prompt)
       preloader.stopAnimating()
       activityLoader.isHidden = true
       presentAlertForError(with: "Something went wrong. please make sure your login details are correct, and try again.")
@@ -77,8 +74,6 @@ class LogInViewController: UIViewController, LogInDisplayLogic {
    
    override func viewDidLayoutSubviews() {
       super.viewDidLayoutSubviews()
-      
-      print("payload on login vc: ", UserDefaults.standard.object(forKey: "accessToken"), UserDefaults.standard.object(forKey: "email"), UserDefaults.standard.object(forKey: "tokenType"), UserDefaults.standard.object(forKey: "firstName"))
    }
    
    override func viewWillAppear(_ animated: Bool) {

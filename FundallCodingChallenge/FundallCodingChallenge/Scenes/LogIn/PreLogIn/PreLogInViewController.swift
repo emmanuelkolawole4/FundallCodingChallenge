@@ -21,7 +21,7 @@ class PreLogInViewController: UIViewController, PreLogInDisplayLogic {
    }
    
    func displayError(prompt: String) {
-      print("error", prompt)
+      presentAlertForError(with: prompt)
    }
    
    

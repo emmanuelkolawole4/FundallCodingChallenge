@@ -35,8 +35,6 @@ class HomeViewController: UIViewController {
    override func viewDidLayoutSubviews() {
       super.viewDidLayoutSubviews()
       balanceView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 15.0)
-      
-      print("payload on home vc: ", UserDefaults.standard.object(forKey: "accessToken"), UserDefaults.standard.object(forKey: "email"), UserDefaults.standard.object(forKey: "tokenType"), UserDefaults.standard.object(forKey: "firstName"))
    }
    
    func setUpViews() {
@@ -782,7 +780,6 @@ class HomeViewController: UIViewController {
    }
    
    @objc func didPressLogOut() {
-      print("logged out")
       dismiss(animated: true, completion: nil)
    }
    

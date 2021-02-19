@@ -25,12 +25,10 @@ class SignUpViewController: UIViewController, SignUpDisplayLogic {
          present(view, animated: true, completion: nil)
          
          UserDefaults.standard.set(emailTextField.text, forKey: "registerationEmail")
-         print(UserDefaults.standard.object(forKey: "registerationEmail"))
       }
    }
    
    func displayError(prompt: String) {
-      print("error", prompt)
       preloader.stopAnimating()
       activityLoader.isHidden = true
       presentAlertForError(with: "The email has already been taken.")

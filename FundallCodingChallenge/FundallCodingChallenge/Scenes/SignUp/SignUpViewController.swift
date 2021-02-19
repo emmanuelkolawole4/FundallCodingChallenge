@@ -7,8 +7,29 @@
 
 import UIKit
 import SnapKit
+import NVActivityIndicatorView
 
-class SignUpViewController: UIViewController {
+protocol SignUpDisplayLogic {
+   func displayResponse(prompt: SignUpResponse)
+   func displayError(prompt: String)
+}
+
+class SignUpViewController: UIViewController, SignUpDisplayLogic {
+   func displayResponse(prompt: SignUpResponse) {
+      print("response", prompt)
+      if prompt.success.status == "SUCCESS" {
+         preloader.stopAnimating()
+         activityLoader.isHidden = true
+         let loginView = LogInViewController()
+         loginView.modalPresentationStyle = .fullScreen
+         present(loginView, animated: true, completion: nil)
+      }
+   }
+   
+   func displayError(prompt: String) {
+      print("error", prompt)
+   }
+   
    
    let scrollView = UIScrollView(frame: .zero)
    let headingText = UILabel()
@@ -20,10 +41,30 @@ class SignUpViewController: UIViewController {
    let emailTextField = UITextField()
    let phoneNumberTextField = UITextField()
    let passwordTextField = UITextField()
+   var interactor: SignUpBusinessLogic?
+   var activityLoader = UIView()
+   var preloader = NVActivityIndicatorView(frame: .zero, type: .circleStrokeSpin, color: .white, padding: .none)
+   
+   func setUpDependencies() {
+      let interactor = SignUpInteractor()
+      let worker = SignUpWorker()
+      let presenter = SignUpPresenter()
+      let networkClient = SignUpApiClient()
+      
+      interactor.worker = worker
+      interactor.presenter = presenter
+      
+      worker.networkClient = networkClient
+      
+      presenter.view = self
+      
+      self.interactor = interactor
+   }
    
    override func viewDidLoad() {
       super.viewDidLoad()
       setUpViews()
+      setUpDependencies()
    }
    
    override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
@@ -47,6 +88,7 @@ class SignUpViewController: UIViewController {
       setUpSignUpButton()
       setUpExistingMemberButton()
       setUpTermsAndConditionText()
+      setupPreloader()
    }
    
    func setUpNavigationItem(_ rightItem: UIBarButtonItem?, _ leftItem: UIBarButtonItem?) {
@@ -89,7 +131,7 @@ class SignUpViewController: UIViewController {
       scrollView.showsHorizontalScrollIndicator = false
       scrollView.showsVerticalScrollIndicator = false
       scrollView.bounces = true
-   
+      
       
       scrollView.snp.makeConstraints { (make) in
          make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(250)
@@ -116,7 +158,7 @@ class SignUpViewController: UIViewController {
       
       firstNameLine.backgroundColor = UIColor(named: "FundallGreen")
       firstNameTextField.setupLeftImage(imageName: "User")
-
+      
       lastNameTextField.placeholder = "Last name"
       lastNameTextField.setValue(UIFont(name: "FoundersGrotesk-Regular", size: 12.0),forKeyPath: "placeholderLabel.font")
       lastNameTextField.autocapitalizationType = .none
@@ -158,6 +200,7 @@ class SignUpViewController: UIViewController {
       
       phoneNumberTextField.placeholder = "Phone number"
       phoneNumberTextField.setValue(UIFont(name: "FoundersGrotesk-Regular", size: 12.0),forKeyPath: "placeholderLabel.font")
+      phoneNumberTextField.keyboardType = .numberPad
       phoneNumberTextField.autocapitalizationType = .none
       phoneNumberTextField.autocapitalizationType = .none
       phoneNumberTextField.returnKeyType = .continue
@@ -221,7 +264,7 @@ class SignUpViewController: UIViewController {
       scrollView.addSubview(signUpBtn)
       signUpBtn.layer.cornerRadius = 3
       signUpBtn.backgroundColor = UIColor(named: "FundallGreen")
-      signUpBtn.setTitle("signup".uppercased(), for: .normal)
+      signUpBtn.setTitle("sign up".uppercased(), for: .normal)
       signUpBtn.setTitleColor(.black, for: .normal)
       signUpBtn.titleLabel?.font = UIFont(name: "FoundersGrotesk-Regular", size: 15)
       signUpBtn.addTarget(self, action: #selector(didPressSignUpBtn), for: .touchUpInside)
@@ -278,20 +321,70 @@ class SignUpViewController: UIViewController {
          make.centerX.equalTo(scrollView)
          make.top.equalTo(signUpBtn.snp.bottom).offset(200)
       }
-      
+   }
+   
+   func setupPreloader() {
+      activityLoader = UIView()
+      view.addSubview(activityLoader)
+      activityLoader.backgroundColor = UIColor(named: "FundallGreen")
+      activityLoader.layer.cornerRadius = 10
+      activityLoader.addSubview(preloader)
+      activityLoader.isHidden = true
+      preloader.snp.makeConstraints { (make) in
+         make.centerX.equalTo(view)
+         make.centerY.equalTo(view)
+         make.height.width.equalTo(30)
+      }
+      activityLoader.snp.makeConstraints { (make) in
+         make.height.width.equalTo(51)
+         make.center.equalTo(view)
+      }
    }
    
    
    @objc func dismissKeyboard() {
-       view.endEditing(true)
+      view.endEditing(true)
    }
    
    @objc func didPressSignUpBtn() {
-      print("sign up btn pressed")
+      let firstNameText = firstNameTextField.text
+      let lastNameText = lastNameTextField.text
+      let emailAddressText = emailTextField.text
+      let phoneNumberText = phoneNumberTextField.text
+      let passwordText = passwordTextField.text
+      
+      if (firstNameText?.isEmpty == false && lastNameText?.isEmpty == false && emailAddressText?.isEmpty == false && phoneNumberText?.isEmpty == false && phoneNumberText?.isEmpty == false && passwordText?.isEmpty == false) {
+         if emailAddressText?.isValidEmail ?? false {
+            
+            //create the account
+            if let firstNameText = firstNameText, let lastNameText = lastNameText, let emailAddressText = emailAddressText, let passwordText = passwordText {
+               let signUpRequest = SignUpRequest(firstName: firstNameText, lastName: lastNameText, email: emailAddressText, password: passwordText, confirmPassword: passwordText)
+               
+               interactor?.signUp(with: signUpRequest)
+               activityLoader.isHidden = false
+               preloader.startAnimating()
+            }
+            
+         } else {
+            presentAlertForError(with: "Please make sure the email address provided is valid.")
+         }
+      } else if (firstNameText?.isEmpty == true && lastNameText?.isEmpty == false && emailAddressText?.isEmpty == false && phoneNumberText?.isEmpty == false && passwordText?.isEmpty == false) ||
+                  (firstNameText?.isEmpty == false && lastNameText?.isEmpty == true && emailAddressText?.isEmpty == false && phoneNumberText?.isEmpty == false && passwordText?.isEmpty == false) ||
+                  (firstNameText?.isEmpty == false && lastNameText?.isEmpty == false && emailAddressText?.isEmpty == true && phoneNumberText?.isEmpty == false && passwordText?.isEmpty == false) ||
+                  (firstNameText?.isEmpty == false && lastNameText?.isEmpty == false && emailAddressText?.isEmpty == false && phoneNumberText?.isEmpty == true && passwordText?.isEmpty == false) ||
+                  (firstNameText?.isEmpty == false && lastNameText?.isEmpty == false && emailAddressText?.isEmpty == false && phoneNumberText?.isEmpty == false && passwordText?.isEmpty == true)
+      {
+         presentAlertForError(with: "Some fields are still empty, please check again.")
+         
+      } else {
+         presentAlertForError(with: "Input fields are empty")
+      }
    }
    
    @objc func didPressLogInBtn() {
-      print("login btn pressed")
+      let loginVC = LogInViewController()
+      loginVC.modalPresentationStyle = .fullScreen
+      present(loginVC, animated: true, completion: nil)
    }
    
 }

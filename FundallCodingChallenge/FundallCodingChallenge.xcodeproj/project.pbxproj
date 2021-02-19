@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C12A22F25DF185B00E5764B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A22E25DF185B00E5764B /* MainNavigationController.swift */; };
+		4C12A23225DF1A9F00E5764B /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23125DF1A9F00E5764B /* SignUpWorker.swift */; };
+		4C12A23525DF1AB200E5764B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23425DF1AB200E5764B /* SignUpPresenter.swift */; };
+		4C12A23825DF1AC100E5764B /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23725DF1AC100E5764B /* SignUpInteractor.swift */; };
+		4C12A23B25DF1C9900E5764B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23A25DF1C9900E5764B /* UIViewControllerExtension.swift */; };
+		4C12A23E25DF1EEE00E5764B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A23D25DF1EEE00E5764B /* StringExtension.swift */; };
+		4C12A24725DF29CE00E5764B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A24625DF29CE00E5764B /* SignUp.swift */; };
+		4C12A25D25DF2B3C00E5764B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A25C25DF2B3C00E5764B /* ApiClient.swift */; };
 		4C533C2C25DD048D002EC8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2B25DD048D002EC8EE /* AppDelegate.swift */; };
 		4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */; };
 		4C533C3025DD048D002EC8EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C533C2F25DD048D002EC8EE /* ViewController.swift */; };
@@ -38,6 +46,14 @@
 
 /* Begin PBXFileReference section */
 		291E853B3ED84379623F76A5 /* Pods_FundallCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundallCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C12A22E25DF185B00E5764B /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = "../../../../../Desktop/team-ace-todo-list-develop/TeamAceTodoListApp/Controllers/MainNavigationController.swift"; sourceTree = "<group>"; };
+		4C12A23125DF1A9F00E5764B /* SignUpWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWorker.swift; sourceTree = "<group>"; };
+		4C12A23425DF1AB200E5764B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		4C12A23725DF1AC100E5764B /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		4C12A23A25DF1C9900E5764B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		4C12A23D25DF1EEE00E5764B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4C12A24625DF29CE00E5764B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		4C12A25C25DF2B3C00E5764B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		4C533C2825DD048D002EC8EE /* FundallCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundallCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C533C2B25DD048D002EC8EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +105,22 @@
 				8C29752657D77E1FE37C73CE /* Pods-FundallCodingChallenge.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C12A24025DF297400E5764B /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				4C12A25C25DF2B3C00E5764B /* ApiClient.swift */,
+			);
+			path = DataLoader;
+			sourceTree = "<group>";
+		};
+		4C12A24525DF29BA00E5764B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C12A24625DF29CE00E5764B /* SignUp.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4C533C1F25DD048D002EC8EE = {
@@ -151,6 +183,8 @@
 				4C555E7C25DDD0CF00B7FA8F /* UIButton+Extension.swift */,
 				4C555E7B25DDD0CF00B7FA8F /* UIView+Extension.swift */,
 				4C533C6925DD2AF9002EC8EE /* UITextFieldExtension.swift */,
+				4C12A23A25DF1C9900E5764B /* UIViewControllerExtension.swift */,
+				4C12A23D25DF1EEE00E5764B /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +200,7 @@
 		4C555E9525DDDCC600B7FA8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C12A24025DF297400E5764B /* DataLoader */,
 				4C533C2B25DD048D002EC8EE /* AppDelegate.swift */,
 				4C533C2D25DD048D002EC8EE /* SceneDelegate.swift */,
 			);
@@ -175,6 +210,7 @@
 		4C555E9725DDDD4700B7FA8F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C12A22E25DF185B00E5764B /* MainNavigationController.swift */,
 				4C555E9A25DDDD8000B7FA8F /* LogIn */,
 				4C555E9925DDDD7400B7FA8F /* Home */,
 				4C555E9825DDDD5200B7FA8F /* SignUp */,
@@ -185,7 +221,11 @@
 		4C555E9825DDDD5200B7FA8F /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				4C12A24525DF29BA00E5764B /* Model */,
 				4C533C4A25DD10AD002EC8EE /* SignUpViewController.swift */,
+				4C12A23125DF1A9F00E5764B /* SignUpWorker.swift */,
+				4C12A23425DF1AB200E5764B /* SignUpPresenter.swift */,
+				4C12A23725DF1AC100E5764B /* SignUpInteractor.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -345,12 +385,20 @@
 				4C533C2C25DD048D002EC8EE /* AppDelegate.swift in Sources */,
 				4C555E7D25DDD0CF00B7FA8F /* UIView+Extension.swift in Sources */,
 				4C533C4B25DD10AD002EC8EE /* SignUpViewController.swift in Sources */,
+				4C12A23B25DF1C9900E5764B /* UIViewControllerExtension.swift in Sources */,
+				4C12A23525DF1AB200E5764B /* SignUpPresenter.swift in Sources */,
 				4C555E7225DDC9BA00B7FA8F /* PreLogInViewController.swift in Sources */,
 				4C555E7E25DDD0CF00B7FA8F /* UIButton+Extension.swift in Sources */,
+				4C12A23E25DF1EEE00E5764B /* StringExtension.swift in Sources */,
+				4C12A22F25DF185B00E5764B /* MainNavigationController.swift in Sources */,
 				4C533C5825DD183A002EC8EE /* StringConstants.swift in Sources */,
 				4C555EA225DE707600B7FA8F /* HomeViewController.swift in Sources */,
+				4C12A25D25DF2B3C00E5764B /* ApiClient.swift in Sources */,
+				4C12A23225DF1A9F00E5764B /* SignUpWorker.swift in Sources */,
 				4C533C6A25DD2AF9002EC8EE /* UITextFieldExtension.swift in Sources */,
 				4C555E9D25DDDE0300B7FA8F /* LogInViewController.swift in Sources */,
+				4C12A24725DF29CE00E5764B /* SignUp.swift in Sources */,
+				4C12A23825DF1AC100E5764B /* SignUpInteractor.swift in Sources */,
 				4C533C2E25DD048D002EC8EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

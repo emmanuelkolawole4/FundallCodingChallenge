@@ -21,7 +21,6 @@ class SignUpInteractor: SignUpBusinessLogic {
       worker?.signUp(with: model, success: { [ weak self ] (response) in
          guard let strongSelf = self else { return }
          strongSelf.presenter?.presentResponse(prompt: response)
-         print(response, ">>>>")
       }, failure: { [ weak self ] (error) in
          guard let strongSelf = self else { return }
          strongSelf.presenter?.presentError(prompt: error)
